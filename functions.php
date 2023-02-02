@@ -61,3 +61,10 @@ function wps_deregister_styles() {
     wp_dequeue_style( 'classic-theme-styles' );
 }
 add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
+
+// Disable Gutenberg
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
+add_action('init', function () {
+    remove_post_type_support('page', 'editor');
+});
