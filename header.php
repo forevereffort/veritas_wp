@@ -40,21 +40,7 @@
             <div class="md-8 xs-7">
               <div class="rightWrap">
                 <nav>
-                  <p class="eachLink">
-                    <a href="about.html">About</a>
-                  </p>
-                  <p class="eachLink">
-                    <a data-subNav="Treatments">Treatments</a>
-                  </p>
-                  <p class="eachLink">
-                    <a class="atPage" data-subNav="Concerns">Concerns</a>
-                  </p>
-                  <p class="eachLink">
-                    <a href="insights.html">Insights</a>
-                  </p>
-                  <p class="eachLink">
-                    <a href="contact.html">Contact</a>
-                  </p>
+                  <?php header_desktop_root_nav(); ?>
                 </nav>
 
                 <div class="iconsNav">
