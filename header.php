@@ -82,21 +82,7 @@
             <div class="r">
               <div class="xs-12">
                 <nav class="mobMainNav show">
-                  <p class="eachLink">
-                    <a class="hoverEffect_dim" href="about.html">About</a>
-                  </p>
-                  <p class="eachLink">
-                    <a class="hoverEffect_dim" data-subNav="Treatments">Treatments</a>
-                  </p>
-                  <p class="eachLink">
-                    <a class="atPage hoverEffect_dim" data-subNav="Concerns">Concerns</a>
-                  </p>
-                  <p class="eachLink">
-                    <a class="hoverEffect_dim" href="insights.html">Insights</a>
-                  </p>
-                  <p class="eachLink">
-                    <a class="hoverEffect_dim" href="contact.html">Contact</a>
-                  </p>
+                  <?php echo header_mobile_root_nav(); ?>
                 </nav>
 
                 <nav class="eachMobSubNav" data-subNavFor="Concerns">
