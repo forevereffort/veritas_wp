@@ -72,6 +72,7 @@
 
       <div class="subNavWrap">
         <div class="overflowWrap">
+          <?php header_desktop_sub_nav(); ?>
           <div class="g eachSubNav" data-subNavFor="Treatments">
             <div class="r flexCenter">
               <div class="mdlg-2">
