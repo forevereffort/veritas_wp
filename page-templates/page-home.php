@@ -208,14 +208,20 @@ get_header();
 
           <div class="g">
             <div class="r rowMargin">
-              <div class="mdlg-3 md-6">
-                <a href="single-treatment.html" class="eachThumb hoverEffect_dim">
-                  <div class="mediaWrapStyling">
-                    <img src="assets/demo/small/demo-thumb-short-01.jpg" data-hiResImg="assets/demo/demo-thumb-short-01.jpg" />
+              <?php
+                foreach($our_treatments['featured_treatments'] as $treatment){
+              ?>
+                  <div class="mdlg-3 md-6">
+                    <a href="<?php echo get_permalink($treatment->ID); ?>" class="eachThumb hoverEffect_dim">
+                      <div class="mediaWrapStyling">
+                        <img src="assets/demo/small/demo-thumb-short-01.jpg" data-hiResImg="assets/demo/demo-thumb-short-01.jpg" />
+                      </div>
+                      <h4><?php echo $treatment->post_title; ?></h4>
+                    </a>
                   </div>
-                  <h4>Rejuran</h4>
-                </a>
-              </div>
+              <?php
+                }
+              ?>
             </div>
           </div>
 
