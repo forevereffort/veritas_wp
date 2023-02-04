@@ -14,6 +14,7 @@ get_header();
       $top_fold_banner = get_field('top_fold_banner');
       $press_features = get_field('press_features', 'option');
       $our_ethos = get_field('our_ethos');
+      $meet_our_doctors = get_field('meet_our_doctors');
   ?>
         <div class="module-topFold">
           <div class="textWrap">
@@ -98,6 +99,40 @@ get_header();
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="owl2ColImgTextOwl owl-carousel">
+          <?php
+            foreach($meet_our_doctors as $item){
+          ?>
+              <div class="module-2ColImgText">
+                <div class="g">
+                  <div class="r rowMargin flexVerticalCenter">
+                    <div class="md-6">
+                      <div class="wysiwygWrapStyling">
+                        <blockquote>“I believe in only administering sustainable treatments that are backed by scientific research and real results. Honesty to our patients isn't a virtue, it's a must.”</blockquote>
+                        <p class="ppNeueMontrealSemiBold">Dr. Chua Cheng Yu</p>
+                        <ul>
+                          <li>9+ years of medical experience</li>
+                          <li>5,000+ cases of aesthetic treatments</li>
+                          <li>Known for his unique treatment protocols from years of experience</li>
+                          <li>Speaker and Trainer at American Academy of Aesthetic Medicine</li>
+                          <li>Regional Trainer for Ultraformer 3 HIFU, Asclepion Yellow Laser, Ellansé & more</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="md-6">
+                      <div class="mediaWrapStyling">
+                        <img src="assets/demo/small/demo-05.jpg" data-hiResImg="assets/demo/demo-05.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <?php
+            }
+          ?>
         </div>
   <?php
     }
