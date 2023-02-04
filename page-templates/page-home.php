@@ -88,11 +88,11 @@ get_header();
                   </div>
                   <div class="mediaWrapStyling asCover">
                     <!-- desktop img -->
-                    <img class="desk" src="assets/demo/small/demo-04.jpg" data-hiResImg="assets/demo/demo-04.jpg" />
+                    <img class="desk" src="<?php echo aq_resize($our_ethos['desktop_background_image']['url'], 50); ?>" data-hiResImg="<?php echo $our_ethos['desktop_background_image']['url']; ?>" />
                     <!-- table img -->
-                    <img class="tab" src="assets/demo/small/demo-04.jpg" data-hiResImg="assets/demo/demo-04.jpg" />
+                    <img class="tab" src="<?php echo aq_resize($our_ethos['tablet_background_image']['url'], 50); ?>" data-hiResImg="<?php echo $our_ethos['tablet_background_image']['url']; ?>" />
                     <!-- mobile img -->
-                    <img class="mob" src="assets/demo/small/demo-04.jpg" data-hiResImg="assets/demo/demo-04.jpg" />
+                    <img class="mob" src="<?php echo aq_resize($our_ethos['mobile_background_image']['url'], 50); ?>" data-hiResImg="<?php echo $our_ethos['mobile_background_image']['url']; ?>" />
                   </div>
                 </div>
               </div>
