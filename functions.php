@@ -1,4 +1,6 @@
 <?php
+add_theme_support( 'post-thumbnails' );
+
 include_once 'inc/remove-no-need.php';
 
 include_once 'inc/nav.php';

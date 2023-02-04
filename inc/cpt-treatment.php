@@ -47,7 +47,7 @@ function registerTreatmentPostType()
         'exclude_from_search'   => true,
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
-        'menu_icon'             => 'dashicons-groups',
+        'menu_icon'             => 'dashicons-heart',
     ];
     register_post_type('treatment', $args);
 }

@@ -210,11 +210,12 @@ get_header();
             <div class="r rowMargin">
               <?php
                 foreach($our_treatments['featured_treatments'] as $treatment){
+                  $featured_img_url = get_the_post_thumbnail_url($treatment->ID, 'full');
               ?>
                   <div class="mdlg-3 md-6">
                     <a href="<?php echo get_permalink($treatment->ID); ?>" class="eachThumb hoverEffect_dim">
                       <div class="mediaWrapStyling">
-                        <img src="assets/demo/small/demo-thumb-short-01.jpg" data-hiResImg="assets/demo/demo-thumb-short-01.jpg" />
+                        <img src="<?php echo aq_resize($featured_img_url, 50); ?>" data-hiResImg="<?php echo $featured_img_url; ?>" />
                       </div>
                       <h4><?php echo $treatment->post_title; ?></h4>
                     </a>
