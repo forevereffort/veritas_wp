@@ -8,27 +8,7 @@
         </div>
         <div class="mdlg-3 md-12">
           <nav class="mainNav">
-            <p class="s">
-              <a class="hoverEffect_dim" href="about.html">About</a>
-            </p>
-            <p class="s">
-              <a class="hoverEffect_dim" href="concerns.html">Concerns</a>
-            </p>
-            <p class="s">
-              <a class="hoverEffect_dim" href="treatments.html">Treatments</a>
-            </p>
-            <p class="s">
-              <a class="hoverEffect_dim" href="insights.html">Insights</a>
-            </p>
-            <p class="s">
-              <a class="hoverEffect_dim" href="press.html">Press & Media</a>
-            </p>
-            <p class="s">
-              <a class="hoverEffect_dim" href="videos.html">Videos</a>
-            </p>
-            <p class="s">
-              <a class="hoverEffect_dim" href="contact.html">Contact</a>
-            </p>
+            <?php echo footer_nav(); ?>
           </nav>
         </div>
         <div class="mdlg-4 md-10">
@@ -104,8 +84,7 @@
         </div>
         <div class="mdlg-8 md-7">
           <div class="termsPrivacyBox">
-            <small><a class="hoverEffect_dim" target="_blank" href="terms-conditions.html">Terms & Conditions</a></small>
-            <small><a class="hoverEffect_dim" target="_blank" href="privacy-policy.html">Privacy Policy</a></small>
+            <?php echo pre_footer_nav(); ?>
           </div>
         </div>
       </div>
