@@ -78,7 +78,7 @@ get_header();
                 <div class="bgImgWithCenTextWrap">
                   <div class="textWrap">
                     <h5><?php echo $our_ethos['headline']; ?></h5>
-                    <h4><?php echo wpautop($our_ethos['description']); ?></h4>
+                    <h4><?php echo strReplaceNewLineToBr($our_ethos['description']); ?></h4>
                     <a href="<?php echo $our_ethos['cta']['url']; ?>" class="buttonWithArrowStyling">
                       <p><?php echo $our_ethos['cta']['title']; ?></p>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14.795">

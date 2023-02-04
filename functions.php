@@ -7,6 +7,8 @@ include_once 'inc/acf.php';
 
 include_once 'inc/svg.php';
 
+include_once 'inc/string.php';
+
 include_once 'inc/cpt-concern.php';
 include_once 'inc/cpt-insight.php';
 include_once 'inc/cpt-press.php';

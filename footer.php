@@ -17,13 +17,13 @@
             <div class="mdlg-6 md-4">
               <div class="eachInfoBox">
                 <p class="s">Address</p>
-                <p class="s"><?php echo wpautop($contact_info['address']); ?></p>
+                <p class="s"><?php echo strReplaceNewLineToBr($contact_info['address']); ?></p>
               </div>
             </div>
             <div class="mdlg-6 md-4">
               <div class="eachInfoBox">
                 <p class="s">Hours</p>
-                <p class="s"><?php echo wpautop($contact_info['operating_hours']); ?></p>
+                <p class="s"><?php echo strReplaceNewLineToBr($contact_info['operating_hours']); ?></p>
               </div>
             </div>
             <div class="mdlg-6 md-4">
