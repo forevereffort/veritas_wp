@@ -16,6 +16,7 @@ get_header();
       $meet_our_doctors = get_field('meet_our_doctors');
       $our_treatments = get_field('our_treatments');
       $clinic_features = get_field('clinic_features');
+      $insights = get_field('insights');
   ?>
         <div class="module-topFold">
           <div class="textWrap">
@@ -247,7 +248,7 @@ get_header();
                           <small>Dr. Chua Cheng Yu</small>
                         </div>
                         <div class="insights__card-title">
-                          <h4><a href="#" class="hoverEffect_dim"></a></h4>
+                          <h4><a href="#" class="hoverEffect_dim">Fungal Acne In Singapore — This Grossly Underdiagnosed Condition May Be The Reason Why Your Acne Treatments Are Not Working</a></h4>
                         </div>
                         <div class="insights__card-info">
                           <small>This condition is routinely mistaken for acne but is actually related to a yeast called Malessezia furfur that’s found naturally on the skin.</small>

@@ -34,7 +34,7 @@ function registerInsightPostType()
         'label'                 => __('Insight', 'veritas'),
         'description'           => __('Insight Description', 'veritas'),
         'labels'                => $labels,
-        'supports'              => ['title', 'thumbnail'],
+        'supports'              => ['title', 'thumbnail', 'excerpt'],
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
