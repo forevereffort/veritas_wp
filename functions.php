@@ -13,6 +13,8 @@ include_once 'inc/string.php';
 
 include_once 'inc/image.php';
 
+include_once 'inc/cf7.php';
+
 include_once 'inc/cpt-concern.php';
 include_once 'inc/cpt-insight.php';
 include_once 'inc/cpt-press.php';
