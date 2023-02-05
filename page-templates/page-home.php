@@ -15,6 +15,7 @@ get_header();
       $our_ethos = get_field('our_ethos');
       $meet_our_doctors = get_field('meet_our_doctors');
       $our_treatments = get_field('our_treatments');
+      $clinic_features = get_field('clinic_features');
   ?>
         <div class="module-topFold">
           <div class="textWrap">
@@ -194,6 +195,35 @@ get_header();
         </div>
 
         <?php get_template_part('theme-setting/2-column', 'content'); ?>
+
+        <div class="clinic-features">
+          <div class="g">
+            <div class="r">
+              <div class="lg-12">
+                <div class="sectionTitleStyling">
+                  <h5>Clinic features</h5>
+                </div>
+              </div>
+
+              <div class="lg-12">
+                <div class="clinic-features__row">
+                  <?php
+                    foreach($clinic_features['features'] as $feature){
+                  ?>
+                      <div class="clinic-features__col">
+                        <div class="clinic-features__icon">
+                          <img src="<?php echo $feature['icon']['url']; ?>" />
+                        </div>
+                        <p><?php echo $feature['feature']; ?></p>
+                      </div>
+                  <?php
+                    }
+                  ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
   <?php
     }
   ?>
