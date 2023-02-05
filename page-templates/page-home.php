@@ -238,9 +238,12 @@ get_header();
                     <div class="lg-6">
                       <div id="insights__card--sticky" class="insights__card">
                         <div class="insights__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
+                          <a href="<?php echo get_permalink($insights['featured_article_large'][0]->ID); ?>" class="eachThumb hoverEffect_dim">
                             <div class="mediaWrapStyling">
-                              <img src="assets/demo/insights/insights-1.png" data-hiResImg="assets/demo/insights/insights-1.png" />
+                              <?php
+                                $featured_img_url = get_the_post_thumbnail_url($insights['featured_article_large'][0]->ID, 'full');
+                              ?>
+                              <img src="<?php echo aq_resize($featured_img_url, 50); ?>" data-hiResImg="<?php echo $featured_img_url; ?>" />
                             </div>
                           </a>
                         </div>
@@ -248,10 +251,10 @@ get_header();
                           <small>Dr. Chua Cheng Yu</small>
                         </div>
                         <div class="insights__card-title">
-                          <h4><a href="#" class="hoverEffect_dim">Fungal Acne In Singapore — This Grossly Underdiagnosed Condition May Be The Reason Why Your Acne Treatments Are Not Working</a></h4>
+                          <h4><a href="<?php echo get_permalink($insights['featured_article_large'][0]->ID); ?>" class="hoverEffect_dim"><?php echo $insights['featured_article_large'][0]->post_title; ?></a></h4>
                         </div>
                         <div class="insights__card-info">
-                          <small>This condition is routinely mistaken for acne but is actually related to a yeast called Malessezia furfur that’s found naturally on the skin.</small>
+                          <small><?php echo $insights['featured_article_large'][0]->post_excerpt; ?></small>
                         </div>
                       </div>
                     </div>
