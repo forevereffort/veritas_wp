@@ -329,7 +329,7 @@ get_header();
                       </div>
                     </div>
                     <div class="lg-12 mob insights__link">
-                      <a href="insights.html" class="hoverEffect_dim">Read more</a>
+                      <a href="<?php echo $insights['cta']['url']; ?>" class="hoverEffect_dim"><?php echo $insights['cta']['title']; ?></a>
                     </div>
                   </div>
                 </div>
