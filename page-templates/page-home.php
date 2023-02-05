@@ -224,6 +224,125 @@ get_header();
             </div>
           </div>
         </div>
+
+        <div id="insights-section" class="insights">
+          <div class="g">
+            <div class="r">
+              <div class="lg-12">
+                <div class="sectionTitleStyling">
+                  <h5>Insights</h5>
+                </div>
+                <div class="insights__wrapper">
+                  <div class="r">
+                    <div class="lg-6">
+                      <div id="insights__card--sticky" class="insights__card">
+                        <div class="insights__card-img">
+                          <a href="#" class="eachThumb hoverEffect_dim">
+                            <div class="mediaWrapStyling">
+                              <img src="assets/demo/insights/insights-1.png" data-hiResImg="assets/demo/insights/insights-1.png" />
+                            </div>
+                          </a>
+                        </div>
+                        <div class="insights__card-name">
+                          <small>Dr. Chua Cheng Yu</small>
+                        </div>
+                        <div class="insights__card-title">
+                          <h4><a href="#" class="hoverEffect_dim"></a></h4>
+                        </div>
+                        <div class="insights__card-info">
+                          <small>This condition is routinely mistaken for acne but is actually related to a yeast called Malessezia furfur that’s found naturally on the skin.</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lg-6 insights__right-col">
+                      <div class="r">
+                        <div class="mdlg-6">
+                          <div class="insights__card">
+                            <div class="insights__card-img">
+                              <a href="#" class="eachThumb hoverEffect_dim">
+                                <div class="mediaWrapStyling">
+                                  <img src="assets/demo/insights/insights-2.png" data-hiResImg="assets/demo/insights/insights-2.png" />
+                                </div>
+                              </a>
+                            </div>
+                            <div class="insights__card-name">
+                              <small>Dr. Lena Fan</small>
+                            </div>
+                            <div class="insights__card-title">
+                              <h4><a href="#" class="hoverEffect_dim">Coolsculpting In Singapore 2022 – Obsolete Or Still An Essential Treatment?</a></h4>
+                            </div>
+                            <div class="insights__card-info">
+                              <small>In recent times, there has been some growing resistance with Coolsculpt as a body contouring treatment option.</small>
+                            </div>
+                          </div>
+                          <div class="insights__card desk">
+                            <div class="insights__card-img">
+                              <a href="#" class="eachThumb hoverEffect_dim">
+                                <div class="mediaWrapStyling">
+                                  <img src="assets/demo/insights/insights-4.png" data-hiResImg="assets/demo/insights/insights-4.png" />
+                                </div>
+                              </a>
+                            </div>
+                            <div class="insights__card-name">
+                              <small>Dr. Lena Fan</small>
+                            </div>
+                            <div class="insights__card-title">
+                              <h4><a href="#" class="hoverEffect_dim">Is Trusculpt Flex Changing The Way We Build Muscle?</a></h4>
+                            </div>
+                            <div class="insights__card-info">
+                              <small>If you feel like your attitude towards body image, eating and exercise has changed because of the pandemic, you’re not alone.</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mdlg-6 desk">
+                          <div class="insights__card">
+                            <div class="insights__card-img">
+                              <a href="#" class="eachThumb hoverEffect_dim">
+                                <div class="mediaWrapStyling">
+                                  <img src="assets/demo/insights/insights-3.png" data-hiResImg="assets/demo/insights/insights-3.png" />
+                                </div>
+                              </a>
+                            </div>
+                            <div class="insights__card-name">
+                              <small>Dr. Lena Fan</small>
+                            </div>
+                            <div class="insights__card-title">
+                              <h4><a href="#" class="hoverEffect_dim">Seeing Unsatisfactory Results From Skinboosters? Here’s Why</a></h4>
+                            </div>
+                            <div class="insights__card-info">
+                              <small>Comprehensive and personalised hair treatments that are scientifically proven to treat hair loss in both men & women.</small>
+                            </div>
+                          </div>
+                          <div class="insights__card">
+                            <div class="insights__card-img">
+                              <a href="#" class="eachThumb hoverEffect_dim">
+                                <div class="mediaWrapStyling">
+                                  <img src="assets/demo/insights/insights-5.png" data-hiResImg="assets/demo/insights/insights-5.png" />
+                                </div>
+                              </a>
+                            </div>
+                            <div class="insights__card-name">
+                              <small>Dr. Lena Fan</small>
+                            </div>
+                            <div class="insights__card-title">
+                              <h4><a href="#" class="hoverEffect_dim">Will Ellansé (少女针) Render Hyaluronic Acid Fillers Obsolete?</a></h4>
+                            </div>
+                            <div class="insights__card-info">
+                              <small>Dermal fillers, specifically hyaluronic acid (HA) fillers, have been the go-to anti-ageing treatment for many A-list superstars for years due to their fast and immediate results.</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lg-12 mob insights__link">
+                      <a href="insights.html" class="hoverEffect_dim">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
   <?php
     }
   ?>

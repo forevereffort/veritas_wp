@@ -34,7 +34,7 @@ function registerInsightPostType()
         'label'                 => __('Insight', 'veritas'),
         'description'           => __('Insight Description', 'veritas'),
         'labels'                => $labels,
-        'supports'              => ['title'],
+        'supports'              => ['title', 'thumbnail'],
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
@@ -44,10 +44,10 @@ function registerInsightPostType()
         'show_in_nav_menus'     => true,
         'can_export'            => true,
         'has_archive'           => true,
-        'exclude_from_search'   => false,
-        'publicly_queryable'    => false,
+        'exclude_from_search'   => true,
+        'publicly_queryable'    => true,
         'capability_type'       => 'page',
-        'menu_icon'             => 'dashicons-groups',
+        'menu_icon'             => 'dashicons-edit-page',
     ];
     register_post_type('insight', $args);
 }
