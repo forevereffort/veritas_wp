@@ -48,7 +48,7 @@ get_header();
             <div class="r rowMargin">
               <?php
                 $args = array(
-                  'post_type' => 'insight',
+                  'post_type' => 'press',
                   'post__not_in' => array($featured_article_large[0]->ID),
                   'posts_per_page' => -1
                 );
