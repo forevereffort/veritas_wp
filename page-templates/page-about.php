@@ -19,11 +19,11 @@ get_header();
   ?>
         <?php get_template_part('page-section/module', 'topFold-page', array('top_fold_banner' => $top_fold_banner)); ?>
 
-        <?php get_template_part('theme-setting/2-column', 'content', array('two_column_content' => $two_column_content_our_ethos)); ?>
+        <?php get_template_part('page-section/2-column', 'content-about-our-ethos', array('two_column_content' => $two_column_content_our_ethos)); ?>
 
-        <?php get_template_part('theme-setting/2-column', 'content', array('two_column_content' => $two_column_content_our_doctors)); ?>
+        <?php get_template_part('page-section/2-column', 'content-about-our-doctors', array('two_column_content' => $two_column_content_our_doctors)); ?>
 
-        <?php get_template_part('theme-setting/4-column', 'content', array('four_column_content' => $four_column_content_our_team)); ?>
+        <?php get_template_part('page-section/4-column', 'content-about-our-team', array('four_column_content' => $four_column_content_our_team)); ?>
 
         <?php get_template_part('page-section/module', '2ColImgText', array('our_commitment' => $our_commitment)); ?>
 
