@@ -14,6 +14,7 @@ get_header();
       $top_fold_banner = get_field('top_fold_banner');
       $our_ethos = get_field('our_ethos');
       $meet_our_doctors = get_field('meet_our_doctors');
+      $four_column_content = get_field('4_column_content');
       $our_treatments = get_field('our_treatments');
       $clinic_features = get_field('clinic_features');
       $insights = get_field('insights');
@@ -27,7 +28,7 @@ get_header();
 
         <?php get_template_part('page-section/module', '2ColImgTextOwl', array('meet_our_doctors' => $meet_our_doctors)); ?>
 
-        <?php get_template_part('theme-setting/4-column', 'content'); ?>
+        <?php get_template_part('theme-setting/4-column', 'content', array('four_column_content' => $four_column_content)); ?>
 
         <?php get_template_part('page-section/module', '4ColListing', array('our_treatments' => $our_treatments)); ?>
 

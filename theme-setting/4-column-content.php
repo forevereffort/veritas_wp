@@ -1,4 +1,4 @@
-<?php $four_column_content = get_field('4_column_content', 'option'); ?>
+<?php $four_column_content = $args['four_column_content']; ?>
 <div class="module-4ColListing mob-hide">
   <div class="g">
     <div class="r">
