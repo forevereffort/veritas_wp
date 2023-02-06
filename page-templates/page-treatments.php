@@ -15,7 +15,7 @@ get_header();
   ?>
       <?php get_template_part('page-section/module', 'topFold-page', array('top_fold_banner' => $top_fold_banner)); ?>
       <?php
-        $terms = get_terms('concern-category', array(
+        $terms = get_terms('treatment-category', array(
           'hide_empty' => false,
         ));
       ?>
@@ -34,10 +34,10 @@ get_header();
                       <div class="r rowMargin">
                         <?php
                           $args = array(
-                            'post_type' => 'concern',
+                            'post_type' => 'treatment',
                             'tax_query' => array(
                               array(
-                                'taxonomy' => 'concern-category',
+                                'taxonomy' => 'treatment-category',
                                 'field' => 'term_id',
                                 'terms' => $term->term_id
                               )
