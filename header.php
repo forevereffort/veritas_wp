@@ -22,6 +22,40 @@
   <?php wp_head();?>
 </head>
 <body>
+  <div class="fixedBtn">
+    <div class="g">
+      <div class="r">
+        <div class="lg-12">
+          <div class="fixedBtn__row">
+            <div class="fixedBtn__inner fixedBtn__inner--hidden">
+              <div class="fixedBtn__hover">
+                <div class="fixedBtn__item">
+                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                    <p>Call us</p>
+                  </a>
+                </div>
+                <div class="fixedBtn__item">
+                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                    <p>Whatsapp</p>
+                  </a>
+                </div>
+                <div class="fixedBtn__item">
+                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                    <p>Contact form</p>
+                  </a>
+                </div>
+              </div>
+              <div class="fixedBtn__normal">
+                <div class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                  <p>Get in touch</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <header>
     <div class="headerWrap">
       <div class="mainNavWrap">
