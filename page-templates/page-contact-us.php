@@ -14,7 +14,7 @@ get_header();
       $top_fold_banner = get_field('top_fold_banner');
   ?>
       <?php get_template_part('page-section/module', 'topFold-page', array('top_fold_banner' => $top_fold_banner)); ?>
-      <?php get_template_part('theme-setting/contact', 'info'); ?>
+      <?php get_template_part('theme-setting/contact', 'info', array('white_background' => true)); ?>
   <?php
     }
   ?>

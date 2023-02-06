@@ -1,5 +1,8 @@
-<?php $contact_info = get_field('contact_info', 'option'); ?>
-<div class="module-contactForm contactForm_withGreyBg">
+<?php
+  $contact_info = get_field('contact_info', 'option');
+  $white_background = isset($args['white_background']) ? $args['white_background'] : false;
+?>
+<div class="module-contactForm <?php echo $white_background ? '' : 'contactForm_withGreyBg'; ?>">
   <div class="g">
     <div class="r rowMargin">
       <div class="lg-12">
