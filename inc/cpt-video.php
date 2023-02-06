@@ -47,7 +47,7 @@ function registerVideoPostType()
         'exclude_from_search'   => true,
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
-        'menu_icon'             => 'dashicons-groups',
+        'menu_icon'             => 'dashicons-video-alt',
     ];
     register_post_type('video', $args);
 }
