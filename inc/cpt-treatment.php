@@ -48,6 +48,9 @@ function registerTreatmentPostType()
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
         'menu_icon'             => 'dashicons-heart',
+        'rewrite'               => [
+            'slug' => 'treatment/products'
+        ]
     ];
     register_post_type('treatment', $args);
 }
