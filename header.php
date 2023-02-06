@@ -92,3 +92,34 @@
       </div>
     </div>
   </header>
+  <div class="module-topSearchBarWrap">
+    <div class="g">
+      <div class="r">
+        <div class="lg-12">
+          <div class="closeBtnWrap">
+            <p class="closeBtn hoverEffect_dim">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.707 8.707">
+                <g id="Group_45373" data-name="Group 45373" transform="translate(9792.854 6303.854)">
+                  <line id="Line_859" data-name="Line 859" x2="8" y2="8" transform="translate(-9792.5 -6303.5)" fill="none" stroke="" stroke-width="1" />
+                  <line id="Line_860" data-name="Line 860" x1="8" y2="8" transform="translate(-9792.5 -6303.5)" fill="none" stroke="" stroke-width="1" />
+                </g>
+              </svg>
+            </p>
+          </div>
+        </div>
+        <div class="lg-11 md-10">
+          <div class="formWrap">
+            <form class="searchNav" action="search.html">
+              <input class="searchInput" type="text" name="searchStrings" placeholder="Type here" />
+              <label class="searchIcon hoverEffect_dim">
+                <input type="submit" />
+                <svg class="searchBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path id="Icon_material-arrow-forward" data-name="Icon material-arrow-forward" d="M16,6,14.238,7.763l6.975,6.987H6v2.5H21.212l-6.975,6.987L16,26,26,16Z" transform="translate(-6 -6)" />
+                </svg>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
