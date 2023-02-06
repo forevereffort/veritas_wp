@@ -34,7 +34,7 @@ function registerConcernPostType()
         'label'                 => __('Concern', 'veritas'),
         'description'           => __('Concern Description', 'veritas'),
         'labels'                => $labels,
-        'supports'              => ['title'],
+        'supports'              => ['title', 'thumbnail'],
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
@@ -44,10 +44,10 @@ function registerConcernPostType()
         'show_in_nav_menus'     => true,
         'can_export'            => true,
         'has_archive'           => true,
-        'exclude_from_search'   => false,
-        'publicly_queryable'    => false,
+        'exclude_from_search'   => true,
+        'publicly_queryable'    => true,
         'capability_type'       => 'page',
-        'menu_icon'             => 'dashicons-groups',
+        'menu_icon'             => 'dashicons-sos',
     ];
     register_post_type('concern', $args);
 }

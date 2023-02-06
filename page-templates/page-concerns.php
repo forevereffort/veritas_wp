@@ -18,7 +18,6 @@ get_header();
         $terms = get_terms('concern-category', array(
           'hide_empty' => false,
         ));
-        print_r($terms);
       ?>
       <div class="grid-list">
         <div class="g">
@@ -27,421 +26,57 @@ get_header();
               <?php
                 foreach($terms as $term){
               ?>
-                  <div id="face" class="grid-list__group" data-grid-cat="face">
+                  <div id="<?php echo $term->slug; ?>" class="grid-list__group" data-grid-cat="<?php echo $term->slug; ?>">
                     <div class="grid-list__tite">
                       <h2><?php echo $term->name; ?></h2>
                     </div>
                     <div class="grid-list__row">
                       <div class="r rowMargin">
                         <?php
+                          $args = array(
+                            'post_type' => 'concern',
+                            'tax_query' => array(
+                              array(
+                                'taxonomy' => 'concern-category',
+                                'field' => 'term_id',
+                                'terms' => $term->term_id
+                              )
+                            )
+                          );
+
                           $the_query = new WP_Query($args);
                           if($the_query->have_posts()){
                             while($the_query->have_posts()){
                               $the_query->the_post();
+
+                              $featured_img_url = get_the_post_thumbnail_url(null, 'full');
+                        ?>
+                              <div class="mdlg-3 md-6">
+                                <div class="grid-list__card">
+                                  <div class="grid-list__card-img">
+                                    <a href="<?php the_permalink(); ?>" class="eachThumb hoverEffect_dim">
+                                      <div class="mediaWrapStyling">
+                                        <img src="<?php echo aq_resize($featured_img_url, 50); ?>" data-hiResImg="<?php echo $featured_img_url; ?>" />
+                                      </div>
+                                    </a>
+                                  </div>
+                                  <div class="grid-list__card-title">
+                                    <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                                  </div>
+                                </div>
+                              </div>
+                        <?php
                             }
                           }
+
+                          wp_reset_postdata();
                         ?>
-                        <div class="mdlg-3 md-6">
-                          <div class="grid-list__card">
-                            <div class="grid-list__card-img">
-                              <a href="#" class="eachThumb hoverEffect_dim">
-                                <div class="mediaWrapStyling">
-                                  <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                                </div>
-                              </a>
-                            </div>
-                            <div class="grid-list__card-title">
-                              <p><a href="#">Saggy Skin</a></p>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
               <?php
                 }
               ?>
-              <div id="face" class="grid-list__group" data-grid-cat="face">
-                <div class="grid-list__tite">
-                  <h2>Face</h2>
-                </div>
-                <div class="grid-list__row">
-                  <div class="r rowMargin">
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="eyes" class="grid-list__group" data-grid-cat="eyes">
-                <div class="grid-list__tite">
-                  <h2>Eyes</h2>
-                </div>
-                <div class="grid-list__row">
-                  <div class="r rowMargin">
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="skin" class="grid-list__group" data-grid-cat="skin">
-                <div class="grid-list__tite">
-                  <h2>Skin</h2>
-                </div>
-                <div class="grid-list__row">
-                  <div class="r rowMargin">
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="body" class="grid-list__group" data-grid-cat="body">
-                <div class="grid-list__tite">
-                  <h2>Body</h2>
-                </div>
-                <div class="grid-list__row">
-                  <div class="r rowMargin">
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="hair" class="grid-list__group" data-grid-cat="hair">
-                <div class="grid-list__tite">
-                  <h2>Hair</h2>
-                </div>
-                <div class="grid-list__row">
-                  <div class="r rowMargin">
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mdlg-3 md-6">
-                      <div class="grid-list__card">
-                        <div class="grid-list__card-img">
-                          <a href="#" class="eachThumb hoverEffect_dim">
-                            <div class="mediaWrapStyling">
-                              <img src="assets/demo/small/demo-06.jpg" data-hiResImg="assets/demo/demo-06.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                        <div class="grid-list__card-title">
-                          <p><a href="#">Saggy Skin</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
