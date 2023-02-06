@@ -143,8 +143,8 @@
         </div>
         <div class="lg-11 md-10">
           <div class="formWrap">
-            <form class="searchNav" action="search.html">
-              <input class="searchInput" type="text" name="searchStrings" placeholder="Type here" />
+            <form class="searchNav" action="<?php echo site_url(); ?>">
+              <input class="searchInput" type="text" name="s" placeholder="Type here" />
               <label class="searchIcon hoverEffect_dim">
                 <input type="submit" />
                 <svg class="searchBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
