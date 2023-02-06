@@ -16,6 +16,7 @@ get_header();
       $meet_our_doctors = get_field('meet_our_doctors');
       $four_column_content = get_field('4_column_content');
       $our_treatments = get_field('our_treatments');
+      $two_column_content = get_field('2_column_content');
       $clinic_features = get_field('clinic_features');
       $insights = get_field('insights');
       $bottom_banner = get_field('bottom_banner');
@@ -32,7 +33,7 @@ get_header();
 
         <?php get_template_part('page-section/module', '4ColListing', array('our_treatments' => $our_treatments)); ?>
 
-        <?php get_template_part('theme-setting/2-column', 'content'); ?>
+        <?php get_template_part('theme-setting/2-column', 'content', array('two_column_content' => $two_column_content)); ?>
 
         <?php get_template_part('page-section/clinic', 'features', array('clinic_features' => $clinic_features)); ?>
 

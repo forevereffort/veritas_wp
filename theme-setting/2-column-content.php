@@ -1,4 +1,4 @@
-<?php $two_column_content = get_field('2_column_content', 'option'); ?>
+<?php $two_column_content = $args['two_column_content']; ?>
 <div class="module-2ColImgText">
   <div class="g">
     <div class="r">
