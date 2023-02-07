@@ -36,7 +36,7 @@
                   </a>
                 </div>
                 <div class="fixedBtn__item">
-                  <a href="https://api.whatsapp.com/send?phone=<?php echo $contact_info['whatsapp_number']; ?>" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                  <a href="https://api.whatsapp.com/send?phone=<?php echo trimNumber($contact_info['whatsapp_number']); ?>" class="buttonWithArrowStyling buttonWithArrowStyling_red">
                     <p>Whatsapp</p>
                   </a>
                 </div>

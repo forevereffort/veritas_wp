@@ -31,7 +31,7 @@
                 <p class="s">Connect</p>
                 <p class="s"><a class="hoverEffect_dim" target="_blank" href="mailto:<?php echo $contact_info['email']; ?>"><?php echo $contact_info['email']; ?></a></p>
                 <p class="s"><a class="hoverEffect_dim" target="_blank" href="tel:<?php echo $contact_info['telephone_number']; ?>"><?php echo $contact_info['telephone_number']; ?> <sup>Tel</sup></a></p>
-                <p class="s"><a class="hoverEffect_dim" target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $contact_info['whatsapp_number']; ?>"><?php echo $contact_info['whatsapp_number']; ?> <sup>Whatsapp</sup></a></p>
+                <p class="s"><a class="hoverEffect_dim" target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo trimNumber($contact_info['whatsapp_number']); ?>"><?php echo $contact_info['whatsapp_number']; ?> <sup>Whatsapp</sup></a></p>
               </div>
             </div>
             <div class="mdlg-6 md-4">
