@@ -15,7 +15,7 @@
             <div class="g">
               <div class="r">
                 <div class="lg-12">
-                  <small><?php echo get_field('author_name'); ?></small>
+                  <small>Video</small>
                   <h1><?php the_title(); ?></h1>
                 </div>
               </div>
