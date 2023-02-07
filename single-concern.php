@@ -8,8 +8,6 @@
             $top_fold_banner = get_field('top_fold_banner');
             $faqs = get_field('faqs');
             $flexible_content = get_field('flexible_content');
-
-            print_r($flexible_content);
     ?>
             <?php get_template_part('page-section/module', 'topFold-concern', array('top_fold_banner' => $top_fold_banner)); ?>
 
