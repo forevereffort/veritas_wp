@@ -20,6 +20,8 @@
               get_template_part('flexible-content/pull', 'out-texts', array('data' => $fc));
             } else if($fc['acf_fc_layout'] == 'horizontal_line'){
               get_template_part('flexible-content/divide', 'line');
+            } else if($fc['acf_fc_layout'] == 'wysiwyg_content'){
+              get_template_part('flexible-content/wysiwyg', 'content', array('data' => $fc));
             }
           }
         ?>
