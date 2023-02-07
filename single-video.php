@@ -65,7 +65,6 @@
                               <img src="<?php echo aq_resize($featured_img_url, 50); ?>" data-hiResImg="<?php echo $featured_img_url; ?>" />
                             </div>
                           </a>
-                          <small>Position (optional)</small>
                           <h4><a href="<?php echo get_the_permalink();?>" class="hoverEffect_dim"><?php the_title(); ?></a></h4>
                           <p><?php the_excerpt(); ?></p>
                         </div>
