@@ -16,6 +16,10 @@
               get_template_part('flexible-content/anchor', 'title', array('data' => $fc));
             } else if($fc['acf_fc_layout'] == '2_col_image_text'){
               get_template_part('flexible-content/2-col', 'image-text', array('data' => $fc));
+            } else if($fc['acf_fc_layout'] == 'pull_out_texts'){
+              get_template_part('flexible-content/pull', 'out-texts', array('data' => $fc));
+            } else if($fc['acf_fc_layout'] == 'horizontal_line'){
+              get_template_part('flexible-content/divide', 'line');
             }
           }
         ?>
