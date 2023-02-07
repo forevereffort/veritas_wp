@@ -5,7 +5,7 @@
     <?php
         if( !empty($data['headline']) ){
     ?>
-            <p class="s">Intro texts HERE (OPTIONAL)</p>
+            <p class="s"><?php echo $data['headline']; ?></p>
     <?php
         }
     ?>
