@@ -27,7 +27,7 @@
           <div class="md-6">
             <div class="imgWrap">
               <?php
-                if( $row['show_cta_button'] ){
+                if( $row['show_cta_button'] && $row['cta_position'] == 'overlay-on-image' ){
               ?>
                   <a href="<?php echo $row['cta']['url']; ?>" class="buttonWithArrowStyling buttonWithArrowStyling_red">
                     <p><?php echo $row['cta']['title']; ?></p>
@@ -45,7 +45,7 @@
             </div>
 
             <?php
-              if( $row['show_cta_button'] ){
+              if( $row['show_cta_button'] && $row['cta_position'] == 'below-image' ){
             ?>
                 <a href="<?php echo $row['cta']['url']; ?>" class="buttonWithArrowStyling buttonWithArrowStyling_red">
                   <p><?php echo $row['cta']['title']; ?></p>
