@@ -31,7 +31,20 @@
   ?>
         <?php get_template_part('page-section/module', 'topFold-concern', array('top_fold_banner' => $top_fold_banner)); ?>
 
-        <?php get_template_part('flexible-content/flexible', 'content', array('flexible_content' => $flexible_content)); ?>
+        <div class="module-singleArticleBodyWithSideNav">
+          <div class="g">
+            <div class="r">
+              <div class="mdlg-3">
+                <div class="sticky">
+                  <div class="sideNavWrap"></div>
+                </div>
+              </div>
+              <div class="mdlg-7">
+                <?php get_template_part('flexible-content/flexible', 'content', array('flexible_content' => $flexible_content)); ?>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <?php get_template_part('page-section/module', 'faq', array('faqs' => $faqs)); ?>
 
