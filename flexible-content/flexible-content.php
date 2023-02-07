@@ -22,6 +22,8 @@
               get_template_part('flexible-content/divide', 'line');
             } else if($fc['acf_fc_layout'] == 'wysiwyg_content'){
               get_template_part('flexible-content/wysiwyg', 'content', array('data' => $fc));
+            } else if($fc['acf_fc_layout'] == 'mp4'){
+              get_template_part('flexible-content/mp4', 'player', array('data' => $fc));
             }
           }
         ?>
