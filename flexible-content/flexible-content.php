@@ -21,6 +21,8 @@
       get_template_part('flexible-content/cta', 'module', array('data' => $fc));
     } else if($fc['acf_fc_layout'] == 'share'){
       get_template_part('flexible-content/share', 'module');
+    } else if($fc['acf_fc_layout'] == 'youtube'){
+      get_template_part('flexible-content/youtube', 'module', array('data' => $fc));
     }
   }
 ?>
