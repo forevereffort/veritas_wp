@@ -19,6 +19,8 @@
       get_template_part('flexible-content/image', 'module', array('data' => $fc));
     } else if($fc['acf_fc_layout'] == 'cta'){
       get_template_part('flexible-content/cta', 'module', array('data' => $fc));
+    } else if($fc['acf_fc_layout'] == 'share'){
+      get_template_part('flexible-content/share', 'module');
     }
   }
 ?>
