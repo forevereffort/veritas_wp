@@ -21,11 +21,36 @@
     </div>
   </div>
   
+  <?php
+    $args = array(
+      's' => get_search_query(),
+      'post_type' => array('post', 'page', 'concern', 'insight', 'press', 'treatment', 'video'),
+      'posts_per_page' => -1
+    );
+
+    $the_query = new WP_Query( $args );
+    $total_post_count = $the_query->found_posts;
+  ?>
+
   <div class="module-searchResultsNum">
     <div class="g">
       <div class="r">
         <div class="lg-12">
-          <small>2 results for '<?php echo get_search_query(); ?>'</small>
+          <?php
+            if( $total_post_count > 1 ){
+          ?>
+              <small><?php echo $total_post_count; ?> results for '<?php echo get_search_query(); ?>'</small>
+          <?php
+            } else if ( $total_post_count == 1 ) {
+          ?>
+              <small>1 result for '<?php echo get_search_query(); ?>'</small>
+          <?php
+            } else {
+          ?>
+              <small>nothing for '<?php echo get_search_query(); ?>'</small>
+          <?php
+            }
+          ?>
         </div>
       </div>
     </div>
@@ -36,9 +61,9 @@
       <div class="r">
         <div class="lg-8 md-10">
           <?php
-            if ( have_posts() ) {
-              while ( have_posts() ) {
-                the_post();
+            if ( $the_query->have_posts() ) {
+              while ( $the_query->have_posts() ) {
+                $the_query->the_post();
           ?>
                 <a class="eachResult hoverEffect_dim" href="<?php echo get_permalink(); ?>">
                   <h4><?php the_title(); ?></h4>
@@ -47,7 +72,9 @@
           <?php
               }
             }
-          ?>
+        
+            wp_reset_postdata();
+          ?> 
         </div>
       </div>
     </div>
