@@ -83,7 +83,7 @@
                 <?php
                   $args = array(
                     'post_type' => 'insight',
-                    'posts_per_page' => -1,
+                    'posts_per_page' => 4,
                     'post__not_in' => array($main_id),
                     'orderby' => 'rand'
                   );
