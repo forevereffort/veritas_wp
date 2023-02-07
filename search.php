@@ -5,8 +5,8 @@
       <div class="r">
         <div class="lg-11 md-10">
           <div class="formWrap">
-            <form class="searchNav" action="search.html">
-              <input class="searchInput" type="text" name="searchStrings" placeholder="" value="skin" />
+            <form class="searchNav" action="<?php echo site_url(); ?>">
+              <input class="searchInput" type="text" name="s" placeholder="Type here" value="<?php echo get_search_query(); ?>" />
   
               <label class="searchIcon hoverEffect_dim">
                 <input type="submit" />
@@ -25,7 +25,7 @@
     <div class="g">
       <div class="r">
         <div class="lg-12">
-          <small>2 results for 'skin'</small>
+          <small>2 results for '<?php echo get_search_query(); ?>'</small>
         </div>
       </div>
     </div>
@@ -35,15 +35,19 @@
     <div class="g">
       <div class="r">
         <div class="lg-8 md-10">
-          <a class="eachResult hoverEffect_dim" href="index.html">
-            <h4>Lorem Ipsum</h4>
-            <small>Lorem ipsum dolor agna aliqua. Ut enim ad minim veniam. Dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</small>
-          </a>  
-          
-          <a class="eachResult hoverEffect_dim" href="index.html">
-            <h4>Lorem Ipsum</h4>
-            <small>Lorem ipsum dolor agna aliqua. Ut enim ad minim veniam. Dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</small>
-          </a>  
+          <?php
+            if ( have_posts() ) {
+              while ( have_posts() ) {
+                the_post();
+          ?>
+                <a class="eachResult hoverEffect_dim" href="<?php echo get_permalink(); ?>">
+                  <h4><?php the_title(); ?></h4>
+                  <small><?php the_excerpt(); ?></small>
+                </a>
+          <?php
+              }
+            }
+          ?>
         </div>
       </div>
     </div>
