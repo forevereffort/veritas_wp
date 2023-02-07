@@ -23,6 +23,8 @@
       get_template_part('flexible-content/share', 'module');
     } else if($fc['acf_fc_layout'] == 'youtube'){
       get_template_part('flexible-content/youtube', 'module', array('data' => $fc));
+    } else if($fc['acf_fc_layout'] == '3_column_text'){
+      get_template_part('flexible-content/3-column', 'text', array('data' => $fc));
     }
   }
 ?>
