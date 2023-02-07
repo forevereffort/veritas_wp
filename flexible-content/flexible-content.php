@@ -17,6 +17,8 @@
       get_template_part('flexible-content/mp4', 'player', array('data' => $fc));
     } else if($fc['acf_fc_layout'] == 'image'){
       get_template_part('flexible-content/image', 'module', array('data' => $fc));
+    } else if($fc['acf_fc_layout'] == 'cta'){
+      get_template_part('flexible-content/cta', 'module', array('data' => $fc));
     }
   }
 ?>
