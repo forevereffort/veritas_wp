@@ -66,6 +66,32 @@
               </div>
             </div>
           </div>
+          <div class="module-4ColListing">
+            <div class="g">
+              <div class="r">
+                <div class="lg-12">
+                  <div class="sectionTitleStyling">
+                    <h5>READ MORE</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="g">
+              <div class="r rowMargin">
+                <div class="mdlg-3 md-6">
+                  <div class="eachThumb">
+                    <div class="mediaWrapStyling">
+                      <img src="assets/demo/small/demo-thumb-short-02.jpg" data-hiResImg="assets/demo/demo-thumb-short-02.jpg" />
+                    </div>
+                    <small>Position (optional)</small>
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </>
+                    </div>
+                </div>    
+              </div>
+            </div>
+          </div> 
         </div>
   <?php
     }
