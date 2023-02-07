@@ -97,11 +97,13 @@
                 ?>
                       <div class="mdlg-3 md-6">
                         <div class="eachThumb">
-                          <div class="mediaWrapStyling">
-                            <img src="<?php echo aq_resize($featured_img_url, 50); ?>" data-hiResImg="<?php echo $featured_img_url; ?>" />
-                          </div>
+                          <a href="<?php echo get_the_permalink();?>" class="hoverEffect_dim">
+                            <div class="mediaWrapStyling">
+                              <img src="<?php echo aq_resize($featured_img_url, 50); ?>" data-hiResImg="<?php echo $featured_img_url; ?>" />
+                            </div>
+                          </a>
                           <small>Position (optional)</small>
-                          <h4><?php the_title(); ?></h4>
+                          <h4><a href="<?php echo get_the_permalink();?>" class="hoverEffect_dim"><?php the_title(); ?></a></h4>
                           <p><?php the_excerpt(); ?></p>
                         </div>
                       </div>
