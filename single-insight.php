@@ -117,6 +117,8 @@
             </div>
           </div> 
         </div>
+
+        <?php get_template_part('theme-setting/contact', 'info'); ?>
   <?php
     }
   ?>
