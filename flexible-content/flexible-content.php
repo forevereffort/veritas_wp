@@ -25,6 +25,10 @@
       get_template_part('flexible-content/youtube', 'module', array('data' => $fc));
     } else if($fc['acf_fc_layout'] == '3_column_text'){
       get_template_part('flexible-content/3-column', 'text', array('data' => $fc));
+    } else if($fc['acf_fc_layout'] == '2_column_feature_listing'){
+      get_template_part('flexible-content/2-column', 'feature-listing', array('data' => $fc));
+    } else if($fc['acf_fc_layout'] == 'key_features'){
+      get_template_part('flexible-content/key', 'features', array('data' => $fc));
     }
   }
 ?>
