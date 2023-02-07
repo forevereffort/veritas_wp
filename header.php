@@ -22,6 +22,7 @@
   <?php wp_head();?>
 </head>
 <body>
+  <?php $contact_info = get_field('contact_info', 'option'); ?>
   <div class="fixedBtn">
     <div class="g">
       <div class="r">
@@ -30,17 +31,17 @@
             <div class="fixedBtn__inner fixedBtn__inner--hidden">
               <div class="fixedBtn__hover">
                 <div class="fixedBtn__item">
-                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                  <a href="tel:<?php echo $contact_info['telephone_number']; ?>" class="buttonWithArrowStyling buttonWithArrowStyling_red">
                     <p>Call us</p>
                   </a>
                 </div>
                 <div class="fixedBtn__item">
-                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                  <a href="https://api.whatsapp.com/send?phone=<?php echo $contact_info['whatsapp_number']; ?>" class="buttonWithArrowStyling buttonWithArrowStyling_red">
                     <p>Whatsapp</p>
                   </a>
                 </div>
                 <div class="fixedBtn__item">
-                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                  <a href="<?php echo site_url(); ?>/contact/" class="buttonWithArrowStyling buttonWithArrowStyling_red">
                     <p>Contact form</p>
                   </a>
                 </div>
