@@ -43,6 +43,7 @@
 
       $top_fold_banner = get_field('top_fold_banner');
       $flexible_content = get_field('flexible_content');
+      $main_id = get_the_ID();
   ?>
         <?php get_template_part('page-section/module', 'topFold-insight', array('top_fold_banner' => $top_fold_banner)); ?>
 
@@ -79,16 +80,37 @@
 
             <div class="g">
               <div class="r rowMargin">
-                <div class="mdlg-3 md-6">
-                  <div class="eachThumb">
-                    <div class="mediaWrapStyling">
-                      <img src="assets/demo/small/demo-thumb-short-02.jpg" data-hiResImg="assets/demo/demo-thumb-short-02.jpg" />
-                    </div>
-                    <small>Position (optional)</small>
-                    <h4>Name</h4>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </>
-                    </div>
-                </div>    
+                <?php
+                  $args = array(
+                    'post_type' => 'insight',
+                    'posts_per_page' => -1,
+                    'post__not_in' => array($main_id),
+                    'orderby' => 'rand'
+                  );
+
+                  $the_query = new WP_Query($args);
+                  if($the_query->have_posts()){
+                    while($the_query->have_posts()){
+                      $the_query->the_post();
+
+                      $featured_img_url = get_the_post_thumbnail_url(null, 'full');
+                ?>
+                      <div class="mdlg-3 md-6">
+                        <div class="eachThumb">
+                          <div class="mediaWrapStyling">
+                            <img src="<?php echo aq_resize($featured_img_url, 50); ?>" data-hiResImg="<?php echo $featured_img_url; ?>" />
+                          </div>
+                          <small>Position (optional)</small>
+                          <h4><?php the_title(); ?></h4>
+                          <p><?php the_excerpt(); ?></p>
+                        </div>
+                      </div>
+                <?php
+                    }
+                  }
+
+                  wp_reset_postdata();
+                ?>
               </div>
             </div>
           </div> 
