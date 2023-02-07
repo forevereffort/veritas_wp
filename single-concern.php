@@ -6,8 +6,11 @@
             the_post();
 
             $top_fold_banner = get_field('top_fold_banner');
+            $faqs = get_field('faqs');
     ?>
             <?php get_template_part('page-section/module', 'topFold-concern', array('top_fold_banner' => $top_fold_banner)); ?>
+
+            <?php get_template_part('page-section/module', 'faq', array('faqs' => $faqs)); ?>
 
             <?php get_template_part('theme-setting/doctor', 'bios'); ?>
 
