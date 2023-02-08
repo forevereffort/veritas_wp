@@ -50,7 +50,7 @@ get_header();
                 $args = array(
                   'post_type' => 'insight',
                   'post__not_in' => array($featured_article_large[0]->ID),
-                  'posts_per_page' => -1
+                  'posts_per_page' => 12
                 );
 
                 $the_query = new WP_Query( $args );
