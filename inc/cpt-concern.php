@@ -92,3 +92,38 @@ function registerConcernCategoryTaxonomy()
 }
 
 add_action('init', 'registerConcernCategoryTaxonomy');
+
+function concern_cpt_generating_rule($wp_rewrite) {
+    $rules = array();
+    $terms = get_terms( array(
+        'taxonomy' => 'concern-category',
+        'hide_empty' => false,
+    ) );
+   
+    $post_type = 'concern';
+
+    foreach ($terms as $term) {    
+                
+        $rules['concerns/' . $term->slug . '/([^/]*)$'] = 'index.php?post_type=' . $post_type. '&concern=$matches[1]&name=$matches[1]';
+                        
+    }
+
+    $wp_rewrite->rules = $rules + $wp_rewrite->rules;
+}
+add_filter('generate_rewrite_rules', 'concern_cpt_generating_rule');
+
+function concern_cpt_change_link( $permalink, $post ) {
+    if( $post->post_type == 'concern' ) {
+        $terms = get_the_terms( $post, 'concern-category' );
+        $term_slug = '';
+        if( ! empty( $terms ) ) {
+            foreach ( $terms as $term ) {
+                $term_slug = $term->slug;
+                break;
+            }
+        }
+        $permalink = get_home_url() ."/concerns/" . $term_slug . '/' . $post->post_name;
+    }
+    return $permalink;
+}
+add_filter('post_type_link',"concern_cpt_change_link", 10, 2);

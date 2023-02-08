@@ -48,9 +48,9 @@ function registerTreatmentPostType()
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
         'menu_icon'             => 'dashicons-heart',
-        'rewrite'               => [
-            'slug' => 'treatment/products'
-        ]
+        // 'rewrite'               => [
+        //     'slug' => 'treatments/%treatment-category%'
+        // ]
     ];
     register_post_type('treatment', $args);
 }
@@ -95,3 +95,38 @@ function registerTreatmentCategoryTaxonomy()
 }
 
 add_action('init', 'registerTreatmentCategoryTaxonomy');
+
+function treatment_cpt_generating_rule($wp_rewrite) {
+    $rules = array();
+    $terms = get_terms( array(
+        'taxonomy' => 'treatment-category',
+        'hide_empty' => false,
+    ) );
+   
+    $post_type = 'treatment';
+
+    foreach ($terms as $term) {    
+                
+        $rules['treatments/' . $term->slug . '/([^/]*)$'] = 'index.php?post_type=' . $post_type. '&treatment=$matches[1]&name=$matches[1]';
+                        
+    }
+
+    $wp_rewrite->rules = $rules + $wp_rewrite->rules;
+}
+add_filter('generate_rewrite_rules', 'treatment_cpt_generating_rule');
+
+function treatment_cpt_change_link( $permalink, $post ) {
+    if( $post->post_type == 'treatment' ) {
+        $terms = get_the_terms( $post, 'treatment-category' );
+        $term_slug = '';
+        if( ! empty( $terms ) ) {
+            foreach ( $terms as $term ) {
+                $term_slug = $term->slug;
+                break;
+            }
+        }
+        $permalink = get_home_url() ."/treatments/" . $term_slug . '/' . $post->post_name;
+    }
+    return $permalink;
+}
+add_filter('post_type_link',"treatment_cpt_change_link", 10, 2);
