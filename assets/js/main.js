@@ -410,7 +410,7 @@ $(document).ready(function () {
   }
 
   // copy to clip board
-  if ($('.module-secondaryHeader').length) {
+  // if ($('.module-secondaryHeader').length) {
     function copyLink(url) {
       var dummy = document.createElement('input'),
         text = url;
@@ -425,7 +425,7 @@ $(document).ready(function () {
     $('.toClipboardBtn').click(function (e) {
       copyLink($(this).attr('data-copyThisUrl'));
     });
-  }
+  // }
 
   // secondary header and progress bar
   if ($('.module-secondaryHeader').length) {

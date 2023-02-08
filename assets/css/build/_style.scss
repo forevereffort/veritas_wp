@@ -1427,37 +1427,6 @@ main {
         margin-left: 20px;
       }
 
-      .toClipboardBtn {
-        position: relative;
-        cursor: pointer;
-
-        &:before {
-          content: "copied!";
-          display: block;
-          font-size: 0.7em;
-          line-height: 1;
-          text-align: center;
-          position: absolute;
-          bottom: -5px;
-          left: 50%;
-          @include transform(translate(-50%, 0%));
-          opacity: 0;
-          color: #a19b97;
-          @include transition(opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1));
-        }
-
-        &:active {
-          @include transition(opacity 0s cubic-bezier(0.4, 0, 0.2, 1));
-          opacity: 1 !important;
-
-          &:before {
-            @include transition(opacity 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0s cubic-bezier(0.4, 0, 0.2, 1));
-            @include transform(translate(-50%, 100%));
-            opacity: 1;
-          }
-        }
-      }
-
       svg {
         width: auto;
         height: pxToRem(18, 20);
@@ -1581,6 +1550,37 @@ main {
 
     .secondaryHeaderWrap {
       padding: 5px 0;
+    }
+  }
+}
+
+.toClipboardBtn {
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: "copied!";
+    display: block;
+    font-size: 0.7em;
+    line-height: 1;
+    text-align: center;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    @include transform(translate(-50%, 0%));
+    opacity: 0;
+    color: #a19b97;
+    @include transition(opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1));
+  }
+
+  &:active {
+    @include transition(opacity 0s cubic-bezier(0.4, 0, 0.2, 1));
+    opacity: 1 !important;
+
+    &:before {
+      @include transition(opacity 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0s cubic-bezier(0.4, 0, 0.2, 1));
+      @include transform(translate(-50%, 100%));
+      opacity: 1;
     }
   }
 }
