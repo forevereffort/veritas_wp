@@ -45,7 +45,7 @@ get_header();
 
         <div class="card-grid">
           <div class="g">
-            <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="r rowMargin" repeater="template_3" post_type="insight" posts_per_page="8" post__not_in="' . $featured_article_large[0]->ID . '" scroll="false" transition="none" transition_container="false"]'); ?>
+            <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="r rowMargin" repeater="template_6" post_type="insight" posts_per_page="8" post__not_in="' . $featured_article_large[0]->ID . '" scroll="false" transition="none" transition_container="false"]'); ?>
               <?php
                 /*$args = array(
                   'post_type' => 'insight',

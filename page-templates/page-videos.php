@@ -17,7 +17,7 @@ get_header();
 
         <div class="card-grid">
           <div class="g">
-            <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="r rowMargin" repeater="template_4" post_type="video" posts_per_page="8" scroll="false" transition="none" transition_container="false"]'); ?>
+            <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="r rowMargin" repeater="template_3" post_type="video" posts_per_page="8" scroll="false" transition="none" transition_container="false"]'); ?>
               <?php
                 /*$args = array(
                   'post_type' => 'video',
