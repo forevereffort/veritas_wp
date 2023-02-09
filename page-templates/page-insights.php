@@ -45,12 +45,13 @@ get_header();
 
         <div class="card-grid">
           <div class="g">
+            <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="r rowMargin" repeater="template_3" post_type="insight" posts_per_page="8" post__not_in="' . $featured_article_large[0]->ID . '" scroll="false" transition="none" transition_container="false"]'); ?>
             <div class="r rowMargin">
               <?php
-                $args = array(
+                /*$args = array(
                   'post_type' => 'insight',
                   'post__not_in' => array($featured_article_large[0]->ID),
-                  'posts_per_page' => 12
+                  'posts_per_page' => 0
                 );
 
                 $the_query = new WP_Query( $args );
@@ -83,7 +84,7 @@ get_header();
                   }
                 }
 
-                wp_reset_postdata();
+                wp_reset_postdata();*/
               ?>
             </div>
           </div>
