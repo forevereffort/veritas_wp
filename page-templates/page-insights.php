@@ -31,7 +31,7 @@ get_header();
               </div>
               <div class="md-6 lg-4">
                 <div class="bigimg-info__info">
-                  <p class="s">Dr. Chua Cheng Yu</p>
+                  <p class="s"><?php echo get_field('author_name', $featured_article_large[0]->ID); ?></p>
                   <h4><a href="<?php echo get_permalink($featured_article_large[0]->ID); ?>" class="hoverEffect_dim"><?php echo $featured_article_large[0]->post_title; ?></a></h4>
                   <small><?php echo $featured_article_large[0]->post_excerpt; ?></small>
                   <div class="card-grid__card-link">
@@ -70,7 +70,7 @@ get_header();
                           </a>
                         </div>
                         <div class="card-grid__card-info">
-                          <p class="s">Dr. Lena Fan</p>
+                          <p class="s"><?php echo get_field('author_name'); ?></p>
                           <h4><a href="<?php the_permalink(); ?>" class="hoverEffect_dim"><?php the_title(); ?></a></h4>
                           <small><?php the_excerpt(); ?></small>
                           <div class="card-grid__card-link">
