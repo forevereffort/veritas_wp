@@ -199,6 +199,14 @@ function initMap() {
 $(document).ready(function () {
   lazyload();
 
+  window.almOnLoad = function(){
+    lazyload();
+  };  
+
+  window.almComplete = function(){
+    lazyload();
+  };
+
   if ($('.module-fontVisualizer').length) {
     function fontvisualizer() {
       $('.module-fontVisualizer .rootPx').html(parseInt($('html').css('font-size').replace(/[^-\d\.]/g, '')));

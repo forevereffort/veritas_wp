@@ -46,7 +46,6 @@ get_header();
         <div class="card-grid">
           <div class="g">
             <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="r rowMargin" repeater="template_3" post_type="insight" posts_per_page="8" post__not_in="' . $featured_article_large[0]->ID . '" scroll="false" transition="none" transition_container="false"]'); ?>
-            <div class="r rowMargin">
               <?php
                 /*$args = array(
                   'post_type' => 'insight',
@@ -86,18 +85,6 @@ get_header();
 
                 wp_reset_postdata();*/
               ?>
-            </div>
-          </div>
-          <div class="g">
-            <div class="r">
-              <div class="lg-12">
-                <div class="card-grid__btn-wrapper">
-                  <button class="card-grid__btn">
-                    <p class="s">LOAD MORE</p>
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

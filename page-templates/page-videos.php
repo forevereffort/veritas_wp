@@ -17,9 +17,9 @@ get_header();
 
         <div class="card-grid">
           <div class="g">
-            <div class="r rowMargin">
+            <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="r rowMargin" repeater="template_4" post_type="video" posts_per_page="8" scroll="false" transition="none" transition_container="false"]'); ?>
               <?php
-                $args = array(
+                /*$args = array(
                   'post_type' => 'video',
                   'posts_per_page' => -1
                 );
@@ -53,20 +53,8 @@ get_header();
                   }
                 }
 
-                wp_reset_postdata();
+                wp_reset_postdata();*/
               ?>
-            </div>
-          </div>
-          <div class="g">
-            <div class="r">
-              <div class="lg-12">
-                <div class="card-grid__btn-wrapper">
-                  <button class="card-grid__btn">
-                    <p class="s">LOAD MORE</p>
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
