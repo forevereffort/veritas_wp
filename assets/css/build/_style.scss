@@ -227,6 +227,7 @@ ol li {
     flex-shrink: 0;
     margin-right: 5px;
     width: pxToRem(25, 20);
+	background-image: none;
   }
 }
 
@@ -2521,11 +2522,16 @@ main {
     margin: 0;
     list-style: none;
     padding: 0;
+	
+	&.footnote {
+		li {
+		 font-size: pxToRem(12, 20);
+		 line-height: 1.2;
+		 color: #a19b97;
+		}  
+	  }
 
     li {
-      font-size: pxToRem(12, 20);
-      line-height: 1.2;
-      color: #a19b97;
 
       &::before {
         text-align: left;
